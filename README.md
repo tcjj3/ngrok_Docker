@@ -32,7 +32,7 @@ sudo docker run -d -i -t \
 ```
 
 
-In this case, `AUTHTOKEN` environment variable is "`xxxxxxxxxxxxxxxxxx`", you can get your `authtoken` from [**ngrok site**](https://ngrok.com/) by [**register an account**](https://dashboard.ngrok.com/signup).
+In this case, `AUTHTOKEN` environment variable is "`xxxxxxxxxxxxxxxxxx`", you can [**get your `authtoken`**](https://dashboard.ngrok.com/get-started/your-authtoken) from [**ngrok site**](https://ngrok.com/) by [**register an account**](https://dashboard.ngrok.com/signup).
 <br>
 <br>
 
@@ -79,7 +79,7 @@ And the `HOST` environment variable can be just "`a local port`", "`host:port`",
 <br>
 
 
-Finally, the port "`4041`" in the container is the "`HTTP Web Interface`" of ngrok, and forwarded by nginx, you can find your "`tunnel URLs`" in this page (such as http://127.0.0.1:4040/). If you don't need this port, just remove the `4041 port forward` argument.
+Finally, the port "`4041`" in the container is the "`HTTP Web Interface`" of ngrok, and forwarded by nginx, you can find your "`tunnel URLs`" in this page (such as **http://127.0.0.1:4040/**). If you don't need this port, just remove the `4041 port forward` argument.
 
 
 
