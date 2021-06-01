@@ -42,13 +42,13 @@ If you want to choose the `server region`, just set the `REGION` environment var
 The region explains are:
 
 ```
-    us - United States (Ohio)      - *.ngrok.io
-    eu - Europe (Frankfurt)        - *.eu.ngrok.io
-    ap - Asia/Pacific (Singapore)  - *.ap.ngrok.io
-    au - Australia (Sydney)        - *.au.ngrok.io
-    sa - South America (Sao Paulo) - *.sa.ngrok.io
-    jp - Japan (Tokyo)             - *.jp.ngrok.io
-    in - India (Mumbai)            - *.in.ngrok.io
+    us - United States (Ohio)       ->  *.ngrok.io
+    eu - Europe (Frankfurt)         ->  *.eu.ngrok.io
+    ap - Asia/Pacific (Singapore)   ->  *.ap.ngrok.io
+    au - Australia (Sydney)         ->  *.au.ngrok.io
+    sa - South America (Sao Paulo)  ->  *.sa.ngrok.io
+    jp - Japan (Tokyo)              ->  *.jp.ngrok.io
+    in - India (Mumbai)             ->  *.in.ngrok.io
 ```
 <br>
 
@@ -60,13 +60,13 @@ If `PROTOCOL` environment variable is "`http`", just set `SUBDOMAIN` environment
 <br>
 For example, the `SUBDOMAIN` environment variable is "`test`", and the domain depends on the `REGION` environment variable, are:
 ```
-    us - test.ngrok.io
-    eu - test.eu.ngrok.io
-    ap - test.ap.ngrok.io
-    au - test.au.ngrok.io
-    sa - test.sa.ngrok.io
-    jp - test.jp.ngrok.io
-    in - test.in.ngrok.io
+    us - test.ngrok.io      ->  http://test.ngrok.io/ or https://test.ngrok.io/
+    eu - test.eu.ngrok.io   ->  http://test.eu.ngrok.io/ or https://test.eu.ngrok.io/
+    ap - test.ap.ngrok.io   ->  http://test.ap.ngrok.io/ or https://test.ap.ngrok.io/
+    au - test.au.ngrok.io   ->  http://test.au.ngrok.io/ or https://test.au.ngrok.io/
+    sa - test.sa.ngrok.io   ->  http://test.sa.ngrok.io/ or https://test.sa.ngrok.io/
+    jp - test.jp.ngrok.io   ->  http://test.jp.ngrok.io/ or https://test.jp.ngrok.io/
+    in - test.in.ngrok.io   ->  http://test.in.ngrok.io/ or https://test.in.ngrok.io/
 ```
 <br>
 
