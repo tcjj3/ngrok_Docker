@@ -74,7 +74,7 @@ If `PROTOCOL` environment variable is "`tcp`", just set `REMOTE_ADDR` environmen
 <br>
 <br>
 
-And the `HOST` environment variable can be just "`a local port`", "`IP:Port`", or "`http(s)://host:port` (when `PROTOCOL` is `http`)".
+And the `HOST` environment variable can be just "`a local port`", "`host:port`", or "`http(s)://host:port` (when `PROTOCOL` is `http`)".
 <br>
 <br>
 
