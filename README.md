@@ -14,6 +14,7 @@ Docker for setup websites, using [**ngrok**](https://ngrok.com/).
 [tcjj3@debian]$ sudo systemctl enable docker && sudo systemctl start docker
 ```
 <br>
+<br>
 
 2. Run ngrok_Docker:
 
@@ -33,6 +34,22 @@ sudo docker run -d -i -t \
 
 In this case, `AUTHTOKEN` environment variable is "`xxxxxxxxxxxxxxxxxx`", you can get your `authtoken` from [**ngrok site**](https://ngrok.com/) by [**register an account**](https://dashboard.ngrok.com/signup).
 <br>
+<br>
+
+If you want to choose the `server region`, just set the `REGION` environment variable to one of the following string: `us, eu, au, ap, sa, jp, in`. The default `server region` is "`us`".
+<br>
+<br>
+The region explains are:
+
+```
+    us - United States (Ohio)      - *.ngrok.io
+    eu - Europe (Frankfurt)        - *.eu.ngrok.io
+    ap - Asia/Pacific (Singapore)  - *.ap.ngrok.io
+    au - Australia (Sydney)        - *.au.ngrok.io
+    sa - South America (Sao Paulo) - *.sa.ngrok.io
+    jp - Japan (Tokyo)             - *.jp.ngrok.io
+    in - India (Mumbai)            - *.in.ngrok.io
+```
 <br>
 
 The `PROTOCOL` environment variable is "`http`" (or can be "`tcp`").
@@ -57,24 +74,8 @@ If `PROTOCOL` environment variable is "`tcp`", just set `REMOTE_ADDR` environmen
 <br>
 <br>
 
-The `HOST` environment variable can be just "`a local port`", "`IP:Port`", or "`http(s)://host:port` (when `PROTOCOL` is `http`)".
+And the `HOST` environment variable can be just "`a local port`", "`IP:Port`", or "`http(s)://host:port` (when `PROTOCOL` is `http`)".
 <br>
-<br>
-
-And if you want to choose the `server region`, just set the `REGION` environment variable to one of the following string: `us, eu, au, ap, sa, jp, in`. The default `server region` is "`us`".
-<br>
-<br>
-The region explains are:
-
-```
-    us - United States (Ohio)      - *.ngrok.io
-    eu - Europe (Frankfurt)        - *.eu.ngrok.io
-    ap - Asia/Pacific (Singapore)  - *.ap.ngrok.io
-    au - Australia (Sydney)        - *.au.ngrok.io
-    sa - South America (Sao Paulo) - *.sa.ngrok.io
-    jp - Japan (Tokyo)             - *.jp.ngrok.io
-    in - India (Mumbai)            - *.in.ngrok.io
-```
 <br>
 
 
