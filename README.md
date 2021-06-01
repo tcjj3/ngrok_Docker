@@ -32,7 +32,7 @@ sudo docker run -d -i -t \
 ```
 
 
-In this case, `AUTHTOKEN` environment variable is "`xxxxxxxxxxxxxxxxxx`", you can [**get your `authtoken`**](https://dashboard.ngrok.com/get-started/your-authtoken) from [**ngrok site**](https://ngrok.com/) by [**register an account**](https://dashboard.ngrok.com/signup).
+In this case, `AUTHTOKEN` environment variable is "`xxxxxxxxxxxxxxxxxx`", you can [**get your `authtoken`**](https://dashboard.ngrok.com/auth) from [**ngrok site**](https://ngrok.com/) by [**register an account**](https://dashboard.ngrok.com/signup).
 <br>
 <br>
 
