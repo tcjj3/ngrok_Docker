@@ -17,7 +17,7 @@ if [ ! -z "HOST" ]; then
 if [ ! -z "$SUBDOMAIN" ] || [ ! -z "$REMOTE_ADDR" ]; then
 
 
-if [ ! -z "$REGION" ]; then
+if [ -z "$REGION" ]; then
 REGION="us"
 fi
 
