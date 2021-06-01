@@ -10,11 +10,21 @@ ngrok authtoken $AUTHTOKEN > /dev/null 2>&1
 
 
 
+
 if [ ! -z "$PROTOCOL" ]; then
 
 if [ ! -z "HOST" ]; then
 if [ ! -z "$SUBDOMAIN" ]; then
+
+
+
+/etc/init.d/nginx force-reload
+/etc/init.d/nginx start
+
 ngrok $PROTOCOL -subdomain $SUBDOMAIN $HOST > /dev/null 2>&1
+
+
+
 else
 	echo >&2 'error: missing required SUBDOMAIN environment variable'
 	echo >&2 '  Did you forget to -e SUBDOMAIN=... ?'
@@ -31,6 +41,7 @@ else
 	echo >&2 '  Did you forget to -e PROTOCOL=... ?'
 	exit 1
 fi
+
 
 
 

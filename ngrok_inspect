@@ -1,0 +1,49 @@
+server {
+	
+	listen 4041 default_server;
+	listen [::]:4041 default_server;
+	
+	#server_name _;
+	
+	#root /var/www/html;
+	#index index.html index.htm index.php tz.php;
+	#include /opt/etc/nginx/conf/php-fpm.conf;
+	#otherconf
+	
+	location / {
+	
+		set $ServerAddress "127.0.0.1:4040";
+		
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		#try_files $uri $uri/ =404;
+		
+		set $flag 0;
+		if ( $is_args = "?" ) {
+			set $flag "${flag}1";
+		}
+		
+		set $cururi "";
+		if ( $flag = "0" ) {
+			#set $cururi "$scheme://$host$uri";
+			set $cururi "http://$ServerAddress$uri";
+		}
+		if ( $flag = "01" ) {
+			#set $cururi "$scheme://$host$uri?$args";
+			set $cururi "http://$ServerAddress$uri?$args";
+		}
+		
+		
+		#proxy_set_header host $host;
+		proxy_set_header host $ServerAddress;
+		
+		proxy_set_header User-Agent $http_user_agent;
+		proxy_set_header Cookie $http_cookie;
+		
+		
+		#proxy_pass http://$ServerAddress/;
+		proxy_pass $cururi;
+	}
+	
+}
+
