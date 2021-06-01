@@ -12,6 +12,7 @@ RUN export DIR_TMP="$(mktemp -d)" \
   && apt-get update \
   || echo "continue..." \
   && apt-get install --no-install-recommends -y wget \
+                                                ca-certificates \
                                                 curl \
                                                 unzip \
                                                 procps \
