@@ -13,6 +13,7 @@ Docker for setup websites, using [**ngrok**](https://ngrok.com/).
 [tcjj3@debian]$ sudo usermod -aG docker $USER
 [tcjj3@debian]$ sudo systemctl enable docker && sudo systemctl start docker
 ```
+<br>
 
 2. Run ngrok_Docker:
 
@@ -29,29 +30,54 @@ sudo docker run -d -i -t \
  tcjj3/ngrok_docker:latest
 ```
 
+
 In this case, `AUTHTOKEN` environment variable is "`xxxxxxxxxxxxxxxxxx`", you can get your `authtoken` from [**ngrok site**](https://ngrok.com/) by [**register an account**](https://dashboard.ngrok.com/signup).
 <br>
+<br>
+
 The `PROTOCOL` environment variable is "`http`" (or can be "`tcp`").
 <br>
-If `PROTOCOL` environment variable is "`http`", just set `SUBDOMAIN` environment variable to the name you wish for domain `.ngrok.io`. For example, the name "`test`" is for "`test.ngrok.io`".
 <br>
+
+If `PROTOCOL` environment variable is "`http`", just set `SUBDOMAIN` environment variable to the name you wish for domain "`.ngrok.io`".
+<br>
+For example, the `SUBDOMAIN` environment variable is "`test`", and the domain depends on the `REGION` environment variable, are:
+```
+    us - test.ngrok.io
+    eu - test.eu.ngrok.io
+    ap - test.ap.ngrok.io
+    au - test.au.ngrok.io
+    sa - test.sa.ngrok.io
+    jp - test.jp.ngrok.io
+    in - test.in.ngrok.io
+```
+<br>
+
 If `PROTOCOL` environment variable is "`tcp`", just set `REMOTE_ADDR` environment variable to `the remote address included port`, such as "`1.tcp.ngrok.io:27210`".
 <br>
+<br>
+
 The `HOST` environment variable can be just "`a local port`", "`IP:Port`", or "`http(s)://host:port` (when `PROTOCOL` is `http`)".
 <br>
+<br>
+
 And if you want to choose the `server region`, just set the `REGION` environment variable to one of the following string: `us, eu, au, ap, sa, jp, in`. The default `server region` is "`us`".
 <br>
 <br>
 The region explains are:
+
 ```
-    us - United States (Ohio)
-    eu - Europe (Frankfurt)
-    ap - Asia/Pacific (Singapore)
-    au - Australia (Sydney)
-    sa - South America (Sao Paulo)
-    jp - Japan (Tokyo)
-    in - India (Mumbai)
+    us - United States (Ohio)      - *.ngrok.io
+    eu - Europe (Frankfurt)        - *.eu.ngrok.io
+    ap - Asia/Pacific (Singapore)  - *.ap.ngrok.io
+    au - Australia (Sydney)        - *.au.ngrok.io
+    sa - South America (Sao Paulo) - *.sa.ngrok.io
+    jp - Japan (Tokyo)             - *.jp.ngrok.io
+    in - India (Mumbai)            - *.in.ngrok.io
 ```
+<br>
+
+
 Finally, the port "`4041`" in the container is the "`HTTP Web Interface`" of ngrok, and forwarded by nginx, you can find your "`tunnel URLs`" in this page (such as http://127.0.0.1:4040/). If you don't need this port, just remove the `4041 port forward` argument.
 
 
