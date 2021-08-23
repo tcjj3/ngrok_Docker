@@ -42,13 +42,13 @@ If you want to choose the `server region`, just set the `REGION` environment var
 The region explains are:
 
 ```
-    us - United States (Ohio)       ->  *.ngrok.io
-    eu - Europe (Frankfurt)         ->  *.eu.ngrok.io
-    ap - Asia/Pacific (Singapore)   ->  *.ap.ngrok.io
-    au - Australia (Sydney)         ->  *.au.ngrok.io
-    sa - South America (Sao Paulo)  ->  *.sa.ngrok.io
-    jp - Japan (Tokyo)              ->  *.jp.ngrok.io
-    in - India (Mumbai)             ->  *.in.ngrok.io
+    us - United States (Ohio)       ->  tunnel.us.ngrok.com:443  ->  *.ngrok.io   
+    eu - Europe (Frankfurt)         ->  tunnel.eu.ngrok.com:443  ->  *.eu.ngrok.io
+    ap - Asia/Pacific (Singapore)   ->  tunnel.ap.ngrok.com:443  ->  *.ap.ngrok.io
+    au - Australia (Sydney)         ->  tunnel.au.ngrok.com:443  ->  *.au.ngrok.io
+    sa - South America (Sao Paulo)  ->  tunnel.sa.ngrok.com:443  ->  *.sa.ngrok.io
+    jp - Japan (Tokyo)              ->  tunnel.jp.ngrok.com:443  ->  *.jp.ngrok.io
+    in - India (Mumbai)             ->  tunnel.in.ngrok.com:443  ->  *.in.ngrok.io
 ```
 <br>
 
@@ -60,13 +60,13 @@ If `PROTOCOL` environment variable is "`http`", just set `SUBDOMAIN` environment
 <br>
 For example, the `SUBDOMAIN` environment variable is "`test`", and the domain depends on the `REGION` environment variable, are:
 ```
-    us - test.ngrok.io      ->  http://test.ngrok.io/ or https://test.ngrok.io/
-    eu - test.eu.ngrok.io   ->  http://test.eu.ngrok.io/ or https://test.eu.ngrok.io/
-    ap - test.ap.ngrok.io   ->  http://test.ap.ngrok.io/ or https://test.ap.ngrok.io/
-    au - test.au.ngrok.io   ->  http://test.au.ngrok.io/ or https://test.au.ngrok.io/
-    sa - test.sa.ngrok.io   ->  http://test.sa.ngrok.io/ or https://test.sa.ngrok.io/
-    jp - test.jp.ngrok.io   ->  http://test.jp.ngrok.io/ or https://test.jp.ngrok.io/
-    in - test.in.ngrok.io   ->  http://test.in.ngrok.io/ or https://test.in.ngrok.io/
+    us - tunnel.us.ngrok.com:443  ->  test.ngrok.io     ->  http://test.ngrok.io/ or https://test.ngrok.io/
+    eu - tunnel.eu.ngrok.com:443  ->  test.eu.ngrok.io  ->  http://test.eu.ngrok.io/ or https://test.eu.ngrok.io/
+    ap - tunnel.ap.ngrok.com:443  ->  test.ap.ngrok.io  ->  http://test.ap.ngrok.io/ or https://test.ap.ngrok.io/
+    au - tunnel.au.ngrok.com:443  ->  test.au.ngrok.io  ->  http://test.au.ngrok.io/ or https://test.au.ngrok.io/
+    sa - tunnel.sa.ngrok.com:443  ->  test.sa.ngrok.io  ->  http://test.sa.ngrok.io/ or https://test.sa.ngrok.io/
+    jp - tunnel.jp.ngrok.com:443  ->  test.jp.ngrok.io  ->  http://test.jp.ngrok.io/ or https://test.jp.ngrok.io/
+    in - tunnel.in.ngrok.com:443  ->  test.in.ngrok.io  ->  http://test.in.ngrok.io/ or https://test.in.ngrok.io/
 ```
 <br>
 
